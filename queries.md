@@ -1,6 +1,8 @@
 ![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
 
-# Answers
+# Answers.
+
+<!-- We removed the _id from all the specified retrieved fields, since it was retrieved automatically.-->
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
@@ -109,3 +111,4 @@ limit: 10
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
+query: {$and: [{founded_year: {$gt: 2000, $lt: 2010}}, {"acquisition.acquired_year": {$gte: 2011}}]} 
