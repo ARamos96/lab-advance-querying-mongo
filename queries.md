@@ -41,11 +41,7 @@ query: {partners: {$size: 0}} <!-- All documents include a partners field, wheth
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 <!-- Your Code Goes Here -->
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {category_code:{$type: "null"}}
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
 <!-- Your Code Goes Here -->
