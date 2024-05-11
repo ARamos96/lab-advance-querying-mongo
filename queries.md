@@ -102,6 +102,9 @@ query: {$and: [{"acquisition.price_amount": {$gt: 10000000}}, {"acquisition.pric
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
 <!-- Your Code Goes Here -->
+query: {"acquisition.acquired_month": {$lte: 3}}
+projection: {name: 1, acquisition: 1, _id: 0}
+limit: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
